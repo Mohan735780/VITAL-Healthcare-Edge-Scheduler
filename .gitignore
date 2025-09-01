@@ -36,4 +36,4 @@ coverage.xml
 *.sublime-workspace
 /docs/_build/
 /venv
-/data/raw/cloudsimsdn-master
+/data/raw/
