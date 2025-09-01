@@ -18,3 +18,8 @@ seaborn~=0.13.0
 # Optional: For interactive notebooks
 jupyterlab
 notebook
+
+
+#others:used in data-preprocessing
+faker                           #used to generate fake data for testing and augmentation
+
