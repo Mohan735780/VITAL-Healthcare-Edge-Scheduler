@@ -1,0 +1,599 @@
+--- Data Audit Report for: DPTARA_Synthetic_Healthcare_Tasks.csv ---
+
+Shape (Rows, Columns): (500, 8)
+
+First 5 Rows:
+  Task_ID  Device_ID  Arrival_Time  Task_Size_MB  Deadline_s Priority_Level  Network_Latency_Edge_ms  Network_Latency_Cloud_ms
+0  TASK_1  DEVICE_36             1            49          53           High                        8                        73
+1  TASK_2  DEVICE_21             3            21          58           High                        8                        68
+2  TASK_3  DEVICE_30             3            30          84         Normal                        5                        86
+3  TASK_4  DEVICE_21             3            25          70         Normal                        7                        88
+4  TASK_5  DEVICE_40             6            32          76         Normal                        6                        70
+
+Data Types and Non-Null Counts:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 500 entries, 0 to 499
+Data columns (total 8 columns):
+ #   Column                    Non-Null Count  Dtype 
+---  ------                    --------------  ----- 
+ 0   Task_ID                   500 non-null    object
+ 1   Device_ID                 500 non-null    object
+ 2   Arrival_Time              500 non-null    int64 
+ 3   Task_Size_MB              500 non-null    int64 
+ 4   Deadline_s                500 non-null    int64 
+ 5   Priority_Level            500 non-null    object
+ 6   Network_Latency_Edge_ms   500 non-null    int64 
+ 7   Network_Latency_Cloud_ms  500 non-null    int64 
+dtypes: int64(5), object(3)
+memory usage: 31.4+ KB
+
+
+Missing Values Count:
+Task_ID                     0
+Device_ID                   0
+Arrival_Time                0
+Task_Size_MB                0
+Deadline_s                  0
+Priority_Level              0
+Network_Latency_Edge_ms     0
+Network_Latency_Cloud_ms    0
+
+Number of Duplicate Rows: 0
+
+Statistical Summary (Numerical Columns):
+       Arrival_Time  Task_Size_MB  Deadline_s  Network_Latency_Edge_ms  Network_Latency_Cloud_ms
+count    500.000000    500.000000  500.000000               500.000000                500.000000
+mean     230.012000     28.404000   53.436000                 7.524000                 74.930000
+std      135.761608     12.996561   26.254228                 1.695634                 14.247072
+min        1.000000      5.000000   10.000000                 5.000000                 50.000000
+25%      105.500000     17.000000   30.000000                 6.000000                 62.000000
+50%      237.000000     29.000000   53.000000                 8.000000                 75.000000
+75%      340.750000     39.000000   77.000000                 9.000000                 87.000000
+max      453.000000     50.000000  100.000000                10.000000                100.000000
+
+Unique Values Count (Categorical Columns):
+Task_ID           500
+Device_ID          50
+Priority_Level      2
+
+==================================================
+--- Data Audit Report for: HCP.csv ---
+
+Shape (Rows, Columns): (1000, 19)
+
+First 5 Rows:
+  patientid  age  gender   department          diagnosis admissiondate dischargedate  treatmentcost    doctorname readmitted     city  severity insuranceprovider treatmenttype       bedtype paymentmethod  satisfactionscore  length_of_stay      age_group
+0     P0001   38    Male  Orthopedics           Fracture    2024-01-19    2024-01-30          89503     Dr. Mehta        Yes  Kolkata  Moderate        LIC Health       Surgery       General     Insurance                  3              11  Adult (18-64)
+1     P0002   57    Male   Pediatrics             Asthma    2024-07-01    2024-07-06          23659  Dr. Banerjee        Yes  Chennai    Severe       Star Health   Observation       Private        Online                  1               5  Adult (18-64)
+2     P0003   32  Female    Neurology             Stroke    2024-02-19    2024-03-04         316652      Dr. Iyer        Yes    Delhi      Mild       Star Health   Observation       General          Cash                  6              14  Adult (18-64)
+3     P0004   22    Male  Orthopedics  Joint Replacement    2024-03-05    2024-03-10          74980     Dr. Singh        Yes  Chennai      Mild     ICICI Lombard       Therapy  Semi-Private   Credit Card                  9               5  Adult (18-64)
+4     P0005   46  Female   Pediatrics             Asthma    2024-05-03    2024-05-08          92331      Dr. Iyer        Yes   Mumbai  Moderate     ICICI Lombard       Surgery           ICU   Credit Card                  8               5  Adult (18-64)
+
+Data Types and Non-Null Counts:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1000 entries, 0 to 999
+Data columns (total 19 columns):
+ #   Column             Non-Null Count  Dtype 
+---  ------             --------------  ----- 
+ 0   patientid          1000 non-null   object
+ 1   age                1000 non-null   int64 
+ 2   gender             1000 non-null   object
+ 3   department         1000 non-null   object
+ 4   diagnosis          1000 non-null   object
+ 5   admissiondate      1000 non-null   object
+ 6   dischargedate      1000 non-null   object
+ 7   treatmentcost      1000 non-null   int64 
+ 8   doctorname         1000 non-null   object
+ 9   readmitted         1000 non-null   object
+ 10  city               1000 non-null   object
+ 11  severity           1000 non-null   object
+ 12  insuranceprovider  1000 non-null   object
+ 13  treatmenttype      1000 non-null   object
+ 14  bedtype            1000 non-null   object
+ 15  paymentmethod      1000 non-null   object
+ 16  satisfactionscore  1000 non-null   int64 
+ 17  length_of_stay     1000 non-null   int64 
+ 18  age_group          1000 non-null   object
+dtypes: int64(4), object(15)
+memory usage: 148.6+ KB
+
+
+Missing Values Count:
+patientid            0
+age                  0
+gender               0
+department           0
+diagnosis            0
+admissiondate        0
+dischargedate        0
+treatmentcost        0
+doctorname           0
+readmitted           0
+city                 0
+severity             0
+insuranceprovider    0
+treatmenttype        0
+bedtype              0
+paymentmethod        0
+satisfactionscore    0
+length_of_stay       0
+age_group            0
+
+Number of Duplicate Rows: 0
+
+Statistical Summary (Numerical Columns):
+               age  treatmentcost  satisfactionscore  length_of_stay
+count  1000.000000    1000.000000        1000.000000     1000.000000
+mean     44.060000  201179.100000           5.449000        8.361000
+std      25.784321  125098.425291           2.885086        4.018311
+min       1.000000    5349.000000           1.000000        2.000000
+25%      21.000000  100768.750000           3.000000        5.000000
+50%      45.000000  183901.500000           5.500000        8.000000
+75%      66.000000  277644.250000           8.000000       12.000000
+max      90.000000  598605.000000          10.000000       15.000000
+
+Unique Values Count (Categorical Columns):
+patientid            1000
+gender                  2
+department              6
+diagnosis              18
+admissiondate         479
+dischargedate         484
+doctorname              6
+readmitted              2
+city                    6
+severity                3
+insuranceprovider       5
+treatmenttype           4
+bedtype                 4
+paymentmethod           4
+age_group               3
+
+==================================================
+--- Data Audit Report for: healthcare offloading_dataset.csv ---
+
+Shape (Rows, Columns): (1000, 14)
+
+First 5 Rows:
+   patient_id            timestamp  heart_rate                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   dwt_coefficients  task_size_MB  task_deadline_sec  cpu_requirement_GHz  node_energy_J  node_cpu_capacity_GHz  network_latency_ms offload_target  energy_consumption_J  response_time_ms  sla_violation
+0        2824  2024-01-01 00:00:00   78.727006             [0.016597541826626913, 0.2682048622840909, 0.35927165572117553, 0.5173135014333274, 0.6775878863006173, 0.8702605318051553, 1.0040431235785623, 1.0849044031734798, 1.312870628454373, 1.5344725073132415, 1.5187232094391439, 1.633253028076064, 1.682342259972959, 1.7110385181258665, 1.7767798276363103, 1.829084376225002, 1.829716086148113, 1.9738734745290951, 1.855717684039126, 1.6950180799847279, 1.752233844582603, 1.6107862947932636, 1.5894747170171173, 1.6025977894704346, 1.5269781878624356, 1.350813348957558, 1.272151411044577, 1.1685442254247906, 1.0997859998255861, 1.0294740935997577, 0.8502289264989629, 0.8540106920908899, 0.761121702342827, 0.6917903129555214, 0.5026070676201675, 0.42504967478069755, 0.3968770080366749, 0.22532887925464892, 0.2355483456858366, 0.16207901260520474, 0.19831572472414277, 0.12212543392191769, 0.1259133192081372, 0.05992445246109327, 0.0068290900681669585, 0.050751872511733055, -0.07400526154993965, -0.021359593499680408, 0.010791867456561872, -0.06386146643801978, 0.016256415520196486, -0.06047248309008341, -0.07585950392132298, -0.01932999459210936, -0.03920708323814827, -0.021173827769941273, -0.08228212489646244, -0.05945036439839049, -0.11543853626502748, -0.13971638094441324, -0.16408869281478292, -0.13825101776934118, -0.3254981984372064, -0.34906729301889877, -0.34712878692117277, -0.5314533978453291, -0.6253887914851162, -0.7096704701981, -0.7752329920308124, -0.9346366304649392, -0.9824255568111491, -1.034314375639244, -1.0513436165872216, -1.3053452656951998, -1.3889956117145172, -1.4533831934092825, -1.4857631407044989, -1.5867323348873694, -1.726373195200662, -1.6599559921263545, -1.7944505783113638, -1.883337562095984, -1.7613765855131267, -1.7875762350264246, -1.8489498616465971, -1.8715614272369268, -1.730279902721373, -1.6327452163336589, -1.5209866192167807, -1.583570254784558, -1.4295419117289316, -1.317362391580526, -1.1636321175711908, -1.0339489794281225, -0.8704020048128429, -0.7872315550383107, -0.541810328151053, -0.3137705905375339, -0.2430469431587995, -0.005432098240634593]      7.666918           3.636571             1.553726     243.796460               1.587184           82.842504          cloud              9.050567        273.414464           True
+1        1409  2024-01-01 00:01:00  105.662028                 [0.1990578592647652, 0.28294448807185135, 0.4551355700599258, 0.5858732660596895, 0.700658500470239, 0.8810064868825388, 1.0612426271903916, 1.1526632207933782, 1.3358082258035635, 1.3942113078274236, 1.5313631156759562, 1.6028087572818088, 1.6730967409209874, 1.8510870510387276, 1.7308351542043519, 1.83017149670743, 1.803760659405396, 1.881906802666634, 1.7625494006902784, 1.7467820091260422, 1.8206420838878652, 1.6774044989408166, 1.7362257095847546, 1.479791892767745, 1.488437741327739, 1.4232598599083741, 1.2517178100222748, 1.038523567679316, 1.0367877446111113, 0.9966259120270483, 0.8786662761869082, 0.7916740016971691, 0.7377794466443884, 0.5867386183459029, 0.5046698853393922, 0.4271974172078847, 0.39168384606228335, 0.30939226632245986, 0.24355606906250957, 0.2001058833628121, 0.12755757723529823, 0.07712682180283151, 0.08040470149739094, 0.03518522338557679, 0.07157727774860836, 0.0670404311745262, -0.04146130648380862, 0.050847222816657614, 0.004058456255278037, 0.024295997059553185, 0.01215529513279049, 0.03050214562667153, 0.05509822754789069, 0.03924475998757963, -0.002899582022300784, -0.02204718089110736, -0.022589569850186644, -0.02615533020886994, -0.18041140544101472, -0.07070386156738105, -0.14039080628028017, -0.2693143982351005, -0.31834267673908334, -0.33498412211829687, -0.47890087237286344, -0.524184274636701, -0.6255566013603218, -0.7055558761327767, -0.7999322038735799, -0.9905606926134507, -1.0224219256704519, -1.026679213028732, -1.164669080036646, -1.3227113803572554, -1.3910411861907401, -1.4865027683572576, -1.4780778168419655, -1.6143355961346781, -1.6793171693073847, -1.735537510650884, -1.8105491895939902, -1.7983392277830716, -1.7482227181820411, -1.786840382035094, -1.786107801320592, -1.746999036244151, -1.8037551395213445, -1.7882023848037063, -1.6425003196837706, -1.4542099574568432, -1.416836765302048, -1.3283651055798122, -1.1673438225436776, -1.0203132416471021, -0.9079738270234563, -0.6966409797623834, -0.6477487406152622, -0.39652994809500897, -0.21650329906965388, -0.08741350276255512]      9.586459           3.227786             0.842964     368.680274               2.236256           42.234645            fog              2.340673        117.157320           True
+2        5506  2024-01-01 00:02:00   86.015385            [0.10353993587982609, 0.26939497646573596, 0.4405435364831085, 0.5245961822034259, 0.8200363035644291, 0.8678376994071716, 1.035294365011589, 1.2118990202722064, 1.2443174421982717, 1.4600145200569856, 1.5790204826388847, 1.6486149653280142, 1.625718826060821, 1.766908006671612, 1.7845812869185407, 1.816423154813371, 1.8141437641142413, 1.8495896628127355, 1.8781801063701364, 1.7540623708250864, 1.6953088028303762, 1.6320577521696533, 1.5460157551719096, 1.5485151980661542, 1.5294493116648258, 1.3883477728734563, 1.281046762841115, 1.1265697154536092, 1.1627859992934273, 0.8898201139044395, 0.88477462363138, 0.8267405787819356, 0.6647288493352395, 0.5721172598436187, 0.4582168394862533, 0.4300546770336985, 0.3036036555905045, 0.2573415869868094, 0.2770673188831485, 0.24509318868526858, 0.10862258742979108, 0.22172963816716726, 0.11156323043041146, 0.009708977506703858, 0.03195042151508349, -0.018342145659132315, 0.01313555577089709, -0.018363684554463952, -0.037679533459989804, -0.028081345640128187, -0.048608430545344056, -0.06492944408095552, 0.007948999737362319, 0.01040962212056094, -0.060467560326579156, -0.002891771443626078, 0.08244335211192927, -0.06514835775206414, -0.15730307566752705, -0.22665523905008061, -0.21173084488079105, -0.2628462476456521, -0.3278901000120966, -0.32279680222582663, -0.4580104102982497, -0.5132568050348437, -0.5387061954682225, -0.6358179789475844, -0.8905791880820053, -0.8804404320573509, -0.9163534496199172, -1.090049600973976, -1.189556008228772, -1.3091345751617431, -1.3243760125166575, -1.5339784742730223, -1.5266798047182921, -1.587537017807732, -1.79230104009465, -1.736549974571749, -1.8419753071352978, -1.7961677790767183, -1.7985115573651713, -1.8569751066656681, -1.7974756596279777, -1.8409270081381828, -1.6907658518981248, -1.6574715064030556, -1.6239329539121399, -1.600097353863342, -1.3624501559910183, -1.2969657655408193, -1.1556372509345554, -1.0800750141751725, -0.8267742832534521, -0.651696219004824, -0.6179601377601179, -0.4539301921068494, -0.18703903839377398, -0.1583208657966853]      9.525550           1.190081             1.379345     302.355472               2.222908           11.629917            fog              4.616372        143.211828           True
+3        5012  2024-01-01 00:03:00   88.256659   [0.06955528559412079, 0.21133358350011566, 0.5124837517980911, 0.6084395527697479, 0.6969197469363243, 0.9359276770242795, 1.0396649920801808, 1.164739427717726, 1.2197020072776557, 1.4617383546893983, 1.4412305579312292, 1.668115190386398, 1.6322010152839512, 1.7345441952360439, 1.6985736464006789, 1.8398809554442024, 1.9410376028494003, 1.7848154882600975, 1.9098883879210358, 1.7863120623756177, 1.745805027494267, 1.6499157602691379, 1.6043220283382977, 1.5291899653435188, 1.5128249380689631, 1.3250456823627745, 1.2573446400840054, 1.1640889920190336, 1.0125701487976024, 1.012161920296175, 0.9676393091328548, 0.7770796414094627, 0.6950510161448807, 0.5871019226706006, 0.49710423083656985, 0.47919574442988266, 0.3924869644305854, 0.28063674241808767, 0.24718385365780246, 0.151969141437232, 0.1657707779712536, 0.1205222969626909, -0.003495014575232925, 0.013451408591327142, 0.04567826976594688, 0.0024121441536863186, 0.01169475305533129, -0.0023076500757637595, 0.03832631423779596, 0.009391455480936173, -0.014907893378377403, -0.050230437247615674, -0.02423375500311879, -0.00811727155608388, -0.0031000671691455125, -0.07550755434754278, -0.07472739938961002, -0.11696542810756838, -0.04882027899966749, -0.09584337614007561, -0.08992533129328158, -0.3474832870281255, -0.3182497054261394, -0.3716174557309822, -0.45845605109711096, -0.5902063327966542, -0.6855328564602281, -0.6935440712352614, -0.7319802482636717, -0.8656254553031827, -0.9950624273322544, -1.1058713468667558, -1.1022208193106762, -1.2708223830817116, -1.3188107970045806, -1.4267524616006342, -1.545493386824298, -1.5679490159904965, -1.7230636836394297, -1.7783648716025042, -1.7673600848414015, -1.857741565166327, -1.798414247784129, -1.7778340945252114, -1.777713044063425, -1.8570471709690812, -1.7303425924645834, -1.73006120121167, -1.621964694674367, -1.5099293096610653, -1.4279894538100026, -1.299064913598559, -1.1983638924235582, -1.0717175294506285, -0.9043446967553427, -0.7235862610001037, -0.5923398539728942, -0.34026870121826014, -0.23865342940022805, -0.003738694414471583]      3.096635           0.609804             1.805148     108.507764               2.749403           57.604342          cloud              9.695338        259.756647           True
+4        4657  2024-01-01 00:04:00  109.896706  [0.06371620654875454, 0.11674167993404597, 0.44199386533191165, 0.4485489112266533, 0.7335626940322506, 0.8561991305194457, 0.9726979656333725, 1.0743646345380395, 1.30027704433506, 1.394994671219604, 1.5908142426812422, 1.719556312324537, 1.6416315899154923, 1.713402006052449, 1.7934563395541687, 1.7999521990454372, 1.7811434142979583, 1.8986544489489117, 1.8156482968318732, 1.736862847586862, 1.8604090167360372, 1.6656527291689243, 1.6325159098574566, 1.608156974680219, 1.4422968019988172, 1.2739068597902956, 1.2842402273313747, 1.159313956051512, 1.0768907954709506, 0.8356423760880345, 0.9443588663238147, 0.7982729881845649, 0.6546857544778646, 0.6243914263510784, 0.5667481596136751, 0.477972496623874, 0.41233894935346543, 0.3868914632974462, 0.2311967337425986, 0.14210847367269108, 0.1327591554297487, 0.13085943367547875, 0.06334446924866237, 0.023314800720620282, 0.03295860024414539, -0.0050644884037273075, 0.06806742041747077, -0.0019193154524853023, 0.02136668426130261, -0.008181622847029196, 0.020610646428194677, -0.021545646361683494, -0.009504603424942536, -0.03752676329850886, -0.028497391444226253, -0.034517943017506464, -0.12365038959149904, -0.007133238018620239, -0.17642616697875335, -0.18940528533103912, -0.1268327441224806, -0.1511604557412951, -0.3454960810870755, -0.3459225389936395, -0.4230479144814824, -0.4944110320634836, -0.6538924853022241, -0.7017806254148784, -0.7700033685914389, -0.8727522819544874, -0.9880740619314434, -1.0392660022690525, -1.151597424186003, -1.3085543050554707, -1.3186412968139432, -1.5068664405974628, -1.5641506374744154, -1.6838908843579343, -1.7162297328324794, -1.7802050382848411, -1.7739040564163893, -1.8275001824518002, -1.8638915637412499, -1.7659602828281944, -1.8259097837088702, -1.7657550822527655, -1.7739176095562468, -1.718091356520401, -1.5368528366242145, -1.4510779321230025, -1.4596937513182129, -1.3265559402585847, -1.2176231668173623, -1.0760858280161996, -0.8382723777041284, -0.7695338814893009, -0.5886781740140408, -0.32165859854472684, -0.18461547834478217, -0.026618348909231218]      8.333426           0.860517             1.842225     319.036950               2.634596           50.708646            fog              3.930733        102.640266           True
+
+Data Types and Non-Null Counts:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1000 entries, 0 to 999
+Data columns (total 14 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   patient_id             1000 non-null   int64  
+ 1   timestamp              1000 non-null   object 
+ 2   heart_rate             1000 non-null   float64
+ 3   dwt_coefficients       1000 non-null   object 
+ 4   task_size_MB           1000 non-null   float64
+ 5   task_deadline_sec      1000 non-null   float64
+ 6   cpu_requirement_GHz    1000 non-null   float64
+ 7   node_energy_J          1000 non-null   float64
+ 8   node_cpu_capacity_GHz  1000 non-null   float64
+ 9   network_latency_ms     1000 non-null   float64
+ 10  offload_target         1000 non-null   object 
+ 11  energy_consumption_J   1000 non-null   float64
+ 12  response_time_ms       1000 non-null   float64
+ 13  sla_violation          1000 non-null   bool   
+dtypes: bool(1), float64(9), int64(1), object(3)
+memory usage: 102.7+ KB
+
+
+Missing Values Count:
+patient_id               0
+timestamp                0
+heart_rate               0
+dwt_coefficients         0
+task_size_MB             0
+task_deadline_sec        0
+cpu_requirement_GHz      0
+node_energy_J            0
+node_cpu_capacity_GHz    0
+network_latency_ms       0
+offload_target           0
+energy_consumption_J     0
+response_time_ms         0
+sla_violation            0
+
+Number of Duplicate Rows: 0
+
+Statistical Summary (Numerical Columns):
+        patient_id   heart_rate  task_size_MB  task_deadline_sec  cpu_requirement_GHz  node_energy_J  node_cpu_capacity_GHz  network_latency_ms  energy_consumption_J  response_time_ms
+count  1000.000000  1000.000000   1000.000000        1000.000000          1000.000000    1000.000000            1000.000000         1000.000000           1000.000000       1000.000000
+mean   5531.738000    85.019692      5.464961           2.746390             1.261227     294.242641               2.018085           56.326730              4.927525        135.209530
+std    2561.963739    14.613748      2.610548           1.275543             0.432106     117.101189               0.569015           25.200847              2.211599         63.369405
+min    1006.000000    60.007560      1.000236           0.515860             0.500392     100.003373               1.001812           10.130642              2.002420         50.055909
+25%    3356.750000    72.661595      3.167929           1.641480             0.890600     190.430565               1.552665           34.386003              3.161202         87.458009
+50%    5486.500000    84.722924      5.478032           2.767788             1.243483     295.410359               1.999588           57.136828              4.334140        121.714753
+75%    7800.250000    98.010814      7.731235           3.790700             1.642033     398.515670               2.507749           78.933800              6.371431        161.700026
+max    9998.000000   109.986557      9.994999           4.998380             1.999535     499.385944               2.999227           99.960193              9.998486        299.072211
+
+Unique Values Count (Categorical Columns):
+timestamp           1000
+dwt_coefficients    1000
+offload_target         2
+
+==================================================
+--- Data Audit Report for: healthcare_dataset.csv ---
+
+Shape (Rows, Columns): (55500, 15)
+
+First 5 Rows:
+            Name  Age  Gender Blood Type Medical Condition Date of Admission            Doctor                    Hospital Insurance Provider  Billing Amount  Room Number Admission Type Discharge Date   Medication  Test Results
+0  Bobby JacksOn   30    Male         B-            Cancer        2024-01-31     Matthew Smith             Sons and Miller         Blue Cross    18856.281306          328         Urgent     2024-02-02  Paracetamol        Normal
+1   LesLie TErRy   62    Male         A+           Obesity        2019-08-20   Samantha Davies                     Kim Inc           Medicare    33643.327287          265      Emergency     2019-08-26    Ibuprofen  Inconclusive
+2    DaNnY sMitH   76  Female         A-           Obesity        2022-09-22  Tiffany Mitchell                    Cook PLC              Aetna    27955.096079          205      Emergency     2022-10-07      Aspirin        Normal
+3   andrEw waTtS   28  Female         O+          Diabetes        2020-11-18       Kevin Wells  Hernandez Rogers and Vang,           Medicare    37909.782410          450       Elective     2020-12-18    Ibuprofen      Abnormal
+4  adrIENNE bEll   43  Female        AB+            Cancer        2022-09-19    Kathleen Hanna                 White-White              Aetna    14238.317814          458         Urgent     2022-10-09   Penicillin      Abnormal
+
+Data Types and Non-Null Counts:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 55500 entries, 0 to 55499
+Data columns (total 15 columns):
+ #   Column              Non-Null Count  Dtype  
+---  ------              --------------  -----  
+ 0   Name                55500 non-null  object 
+ 1   Age                 55500 non-null  int64  
+ 2   Gender              55500 non-null  object 
+ 3   Blood Type          55500 non-null  object 
+ 4   Medical Condition   55500 non-null  object 
+ 5   Date of Admission   55500 non-null  object 
+ 6   Doctor              55500 non-null  object 
+ 7   Hospital            55500 non-null  object 
+ 8   Insurance Provider  55500 non-null  object 
+ 9   Billing Amount      55500 non-null  float64
+ 10  Room Number         55500 non-null  int64  
+ 11  Admission Type      55500 non-null  object 
+ 12  Discharge Date      55500 non-null  object 
+ 13  Medication          55500 non-null  object 
+ 14  Test Results        55500 non-null  object 
+dtypes: float64(1), int64(2), object(12)
+memory usage: 6.4+ MB
+
+
+Missing Values Count:
+Name                  0
+Age                   0
+Gender                0
+Blood Type            0
+Medical Condition     0
+Date of Admission     0
+Doctor                0
+Hospital              0
+Insurance Provider    0
+Billing Amount        0
+Room Number           0
+Admission Type        0
+Discharge Date        0
+Medication            0
+Test Results          0
+
+Number of Duplicate Rows: 534
+
+Statistical Summary (Numerical Columns):
+                Age  Billing Amount   Room Number
+count  55500.000000    55500.000000  55500.000000
+mean      51.539459    25539.316097    301.134829
+std       19.602454    14211.454431    115.243069
+min       13.000000    -2008.492140    101.000000
+25%       35.000000    13241.224652    202.000000
+50%       52.000000    25538.069376    302.000000
+75%       68.000000    37820.508436    401.000000
+max       89.000000    52764.276736    500.000000
+
+Unique Values Count (Categorical Columns):
+Name                  49992
+Gender                    2
+Blood Type                8
+Medical Condition         6
+Date of Admission      1827
+Doctor                40341
+Hospital              39876
+Insurance Provider        5
+Admission Type            3
+Discharge Date         1856
+Medication                5
+Test Results              3
+
+==================================================
+--- Data Audit Report for: DPTARA_dataset.csv ---
+
+Shape (Rows, Columns): (200, 12)
+
+First 5 Rows:
+   Task_ID  IoT_Device_ID  Task_Size_MB  Deadline_sec Priority Assigned_Resource  Edge_CPU_MIPS  Cloud_CPU_MIPS  RAM_Edge_GB  RAM_Cloud_GB  Latency_ms  Power_Usage_W
+0        1             39         47.43         14.14   Normal              Edge         929.20         7466.07           32            64       56.54             50
+1        2             29         19.54         13.67   Normal             Cloud        1180.77         2609.05           32            64        5.61            200
+2        3             15         28.35         86.99   Normal              Edge         545.98         8809.66           32            64        5.91             50
+3        4             43         36.64         73.33     High             Cloud        2785.75         5961.17           32            64        8.41            200
+4        5              8         21.36         52.68   Normal              Edge         794.38         5844.69           32            64        5.91             50
+
+Data Types and Non-Null Counts:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 200 entries, 0 to 199
+Data columns (total 12 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   Task_ID            200 non-null    int64  
+ 1   IoT_Device_ID      200 non-null    int64  
+ 2   Task_Size_MB       200 non-null    float64
+ 3   Deadline_sec       200 non-null    float64
+ 4   Priority           200 non-null    object 
+ 5   Assigned_Resource  200 non-null    object 
+ 6   Edge_CPU_MIPS      200 non-null    float64
+ 7   Cloud_CPU_MIPS     200 non-null    float64
+ 8   RAM_Edge_GB        200 non-null    int64  
+ 9   RAM_Cloud_GB       200 non-null    int64  
+ 10  Latency_ms         200 non-null    float64
+ 11  Power_Usage_W      200 non-null    int64  
+dtypes: float64(5), int64(5), object(2)
+memory usage: 18.9+ KB
+
+
+Missing Values Count:
+Task_ID              0
+IoT_Device_ID        0
+Task_Size_MB         0
+Deadline_sec         0
+Priority             0
+Assigned_Resource    0
+Edge_CPU_MIPS        0
+Cloud_CPU_MIPS       0
+RAM_Edge_GB          0
+RAM_Cloud_GB         0
+Latency_ms           0
+Power_Usage_W        0
+
+Number of Duplicate Rows: 0
+
+Statistical Summary (Numerical Columns):
+          Task_ID  IoT_Device_ID  Task_Size_MB  Deadline_sec  Edge_CPU_MIPS  Cloud_CPU_MIPS  RAM_Edge_GB  RAM_Cloud_GB  Latency_ms  Power_Usage_W
+count  200.000000     200.000000     200.00000    200.000000      200.00000      200.000000        200.0         200.0  200.000000     200.000000
+mean   100.500000      25.260000      27.85930     57.366950     1766.87780     6079.739100         32.0          64.0   26.863250      95.750000
+std     57.879185      14.229716      13.04194     28.059839      751.78949     2376.637822          0.0           0.0   31.493817      69.234417
+min      1.000000       1.000000       5.23000     10.980000      527.49000     2051.090000         32.0          64.0    5.120000      50.000000
+25%     50.750000      13.000000      16.54000     35.350000     1081.59500     3912.180000         32.0          64.0    6.722500      50.000000
+50%    100.500000      26.000000      29.01000     59.655000     1789.50500     6355.555000         32.0          64.0    8.315000      50.000000
+75%    150.250000      38.250000      37.88000     83.152500     2432.70000     8106.980000         32.0          64.0   56.552500     200.000000
+max    200.000000      50.000000      49.55000     99.970000     2994.84000     9977.000000         32.0          64.0   99.820000     200.000000
+
+Unique Values Count (Categorical Columns):
+Priority             2
+Assigned_Resource    2
+
+==================================================
+--- Data Audit Report for: medical_resource_allocation_binary_dataset.csv ---
+
+Shape (Rows, Columns): (500, 13)
+
+First 5 Rows:
+  Patient_ID  Age  Gender Health_Status Disease_Type Resource_Needed  Duration_of_Stay Sensor_ID Resource_ID  Utilization_Status  Network_Speed  Overlapping_Interference  Resource_Utilization_Efficiency
+0       P100   61  Female      Critical  Respiratory           Staff                12      S068        R088                   1      27.228491                         0                                1
+1       P390   69    Male        Stable        Other        Medicine                 1      S210        R027                   1      11.423188                         0                                1
+2       P203   40    Male        Stable     Diabetes             Bed                 6      S196        R038                   1      85.895028                         0                                1
+3       P387   27  Female    Recovering        Other           Staff                 4      S098        R072                   1      36.234617                         0                                1
+4       P172   87  Female      Critical       Injury        Medicine                 5      S093        R065                   0      72.080096                         0                                0
+
+Data Types and Non-Null Counts:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 500 entries, 0 to 499
+Data columns (total 13 columns):
+ #   Column                           Non-Null Count  Dtype  
+---  ------                           --------------  -----  
+ 0   Patient_ID                       500 non-null    object 
+ 1   Age                              500 non-null    int64  
+ 2   Gender                           500 non-null    object 
+ 3   Health_Status                    500 non-null    object 
+ 4   Disease_Type                     500 non-null    object 
+ 5   Resource_Needed                  500 non-null    object 
+ 6   Duration_of_Stay                 500 non-null    int64  
+ 7   Sensor_ID                        500 non-null    object 
+ 8   Resource_ID                      500 non-null    object 
+ 9   Utilization_Status               500 non-null    int64  
+ 10  Network_Speed                    500 non-null    float64
+ 11  Overlapping_Interference         500 non-null    int64  
+ 12  Resource_Utilization_Efficiency  500 non-null    int64  
+dtypes: float64(1), int64(5), object(7)
+memory usage: 50.9+ KB
+
+
+Missing Values Count:
+Patient_ID                         0
+Age                                0
+Gender                             0
+Health_Status                      0
+Disease_Type                       0
+Resource_Needed                    0
+Duration_of_Stay                   0
+Sensor_ID                          0
+Resource_ID                        0
+Utilization_Status                 0
+Network_Speed                      0
+Overlapping_Interference           0
+Resource_Utilization_Efficiency    0
+
+Number of Duplicate Rows: 0
+
+Statistical Summary (Numerical Columns):
+              Age  Duration_of_Stay  Utilization_Status  Network_Speed  Overlapping_Interference  Resource_Utilization_Efficiency
+count  500.000000          500.0000          500.000000     500.000000                500.000000                       500.000000
+mean    52.930000            7.3480            0.798000      56.107147                  0.306000                         0.556000
+std     21.009519            4.1237            0.401894      25.335337                  0.461291                         0.497352
+min     18.000000            1.0000            0.000000      10.181667                  0.000000                         0.000000
+25%     34.000000            4.0000            1.000000      36.634860                  0.000000                         0.000000
+50%     52.000000            7.0000            1.000000      56.185185                  0.000000                         1.000000
+75%     71.000000           11.0000            1.000000      80.271808                  1.000000                         1.000000
+max     89.000000           14.0000            1.000000      99.663606                  1.000000                         1.000000
+
+Unique Values Count (Categorical Columns):
+Patient_ID         500
+Gender               3
+Health_Status        3
+Disease_Type         5
+Resource_Needed      5
+Sensor_ID          240
+Resource_ID         99
+
+==================================================
+--- Data Audit Report for: medical_data.csv ---
+
+Shape (Rows, Columns): (1000, 13)
+
+First 5 Rows:
+   Patient_ID  Age  Gender    Medical_Condition         Treatment   Outcome Insurance_Type  Income Region Smoking_Status Admission_Type  Hospital_ID  Length_of_Stay
+0           1   77  Female  Chronic Obstructive          Dialysis    Stable         Public   77444  North  Former smoker         Urgent         3173              20
+1           2   62  Female              Obesity  Physical therapy  Improved         Public   19367   West     Non-smoker         Urgent        65671               4
+2           3   77    Male         Hypertension   Inhaler therapy  Improved       Medicare   16054  North     Non-smoker         Urgent        96914               3
+3           4   41  Female  Alzheimer's Disease      Medication C  Worsened       Medicare   54371   West     Non-smoker      Emergency        15732              11
+4           5   82    Male  Alzheimer's Disease      Chemotherapy    Stable        Private   55489   West     Non-smoker      Emergency        98232               2
+
+Data Types and Non-Null Counts:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1000 entries, 0 to 999
+Data columns (total 13 columns):
+ #   Column             Non-Null Count  Dtype 
+---  ------             --------------  ----- 
+ 0   Patient_ID         1000 non-null   int64 
+ 1   Age                1000 non-null   int64 
+ 2   Gender             1000 non-null   object
+ 3   Medical_Condition  1000 non-null   object
+ 4   Treatment          1000 non-null   object
+ 5   Outcome            1000 non-null   object
+ 6   Insurance_Type     1000 non-null   object
+ 7   Income             1000 non-null   int64 
+ 8   Region             1000 non-null   object
+ 9   Smoking_Status     1000 non-null   object
+ 10  Admission_Type     1000 non-null   object
+ 11  Hospital_ID        1000 non-null   int64 
+ 12  Length_of_Stay     1000 non-null   int64 
+dtypes: int64(5), object(8)
+memory usage: 101.7+ KB
+
+
+Missing Values Count:
+Patient_ID           0
+Age                  0
+Gender               0
+Medical_Condition    0
+Treatment            0
+Outcome              0
+Insurance_Type       0
+Income               0
+Region               0
+Smoking_Status       0
+Admission_Type       0
+Hospital_ID          0
+Length_of_Stay       0
+
+Number of Duplicate Rows: 0
+
+Statistical Summary (Numerical Columns):
+        Patient_ID          Age        Income   Hospital_ID  Length_of_Stay
+count  1000.000000  1000.000000   1000.000000   1000.000000     1000.000000
+mean    500.500000    45.710000  50181.756000  51709.297000       10.041000
+std     288.819436    26.797612  29178.022872  29653.627294        6.066145
+min       1.000000     0.000000    169.000000     37.000000        0.000000
+25%     250.750000    22.750000  24079.750000  25293.000000        5.000000
+50%     500.500000    45.000000  51972.500000  52220.500000       10.000000
+75%     750.250000    70.000000  74972.500000  78788.000000       15.000000
+max    1000.000000    90.000000  99980.000000  99978.000000       20.000000
+
+Unique Values Count (Categorical Columns):
+Gender                8
+Medical_Condition    15
+Treatment            13
+Outcome               3
+Insurance_Type        3
+Region                4
+Smoking_Status        2
+Admission_Type        3
+
+==================================================
+--- Data Audit Report for: healthcare_analysis.csv ---
+
+Shape (Rows, Columns): (5000, 15)
+
+First 5 Rows:
+                             Patient_ID  Age  Gender Blood_Type Condition Medication              Doctor           Location  Heart_Rate  Temperature Blood_Pressure    BMI          Insurance_Provider Appointment_Date                                                                                  Notes
+0  f01bb3ec-abc0-40e8-9ce4-9f422792c282   89  Female         B+   Obesity        too          Amber Duke      Pamelachester          72         36.4         137/71  23.13              Phillips-Lopez       2024-12-26         Baby believe discuss ready player can. Few agent fact serve own pull movement.
+1  640c70e2-38b8-4625-97f2-43693898de10   25  Female        AB+   Allergy   possible  Mr. Ronald Roberts  East Jessicamouth          75         36.8         113/78  29.48  Charles, Moreno and Garcia       2024-08-27                                                         Company wish with claim glass.
+2  187d0e3d-3e5b-46b9-8385-3ebc53dd1c13   79  Female         A+   Allergy      bring      Timothy Mathis      Lake Mitchell          80         36.3         134/84  30.49                   Banks PLC       2024-12-07      Performance several subject worker front TV girl. Always free push end establish.
+3  73cb57ab-aba5-4b97-96b1-315130b94e0f   33  Female        AB+  Diabetes        the        Tracy Martin         Riveraside          85         36.3         138/70  28.97                  Flores Inc       2023-01-16  Clearly item soldier fine message water. Him power service we radio pressure several.
+4  1421c9bf-0a44-4501-8f8a-290ba636a324   30    Male         B+   Allergy      where          Cody Silva  West Kevinborough          87         37.6         119/62  23.69   Mckee, Spence and Krueger       2023-12-23                   Test police end bit. Particular quickly fill west low worker return.
+
+Data Types and Non-Null Counts:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 5000 entries, 0 to 4999
+Data columns (total 15 columns):
+ #   Column              Non-Null Count  Dtype  
+---  ------              --------------  -----  
+ 0   Patient_ID          5000 non-null   object 
+ 1   Age                 5000 non-null   int64  
+ 2   Gender              5000 non-null   object 
+ 3   Blood_Type          5000 non-null   object 
+ 4   Condition           5000 non-null   object 
+ 5   Medication          5000 non-null   object 
+ 6   Doctor              5000 non-null   object 
+ 7   Location            5000 non-null   object 
+ 8   Heart_Rate          5000 non-null   int64  
+ 9   Temperature         5000 non-null   float64
+ 10  Blood_Pressure      5000 non-null   object 
+ 11  BMI                 5000 non-null   float64
+ 12  Insurance_Provider  5000 non-null   object 
+ 13  Appointment_Date    5000 non-null   object 
+ 14  Notes               5000 non-null   object 
+dtypes: float64(2), int64(2), object(11)
+memory usage: 586.1+ KB
+
+
+Missing Values Count:
+Patient_ID            0
+Age                   0
+Gender                0
+Blood_Type            0
+Condition             0
+Medication            0
+Doctor                0
+Location              0
+Heart_Rate            0
+Temperature           0
+Blood_Pressure        0
+BMI                   0
+Insurance_Provider    0
+Appointment_Date      0
+Notes                 0
+
+Number of Duplicate Rows: 0
+
+Statistical Summary (Numerical Columns):
+               Age   Heart_Rate  Temperature          BMI
+count  5000.000000  5000.000000  5000.000000  5000.000000
+mean     54.221200    80.218200    37.008240    26.578414
+std      20.967732    11.857669     0.586021     4.913359
+min      18.000000    60.000000    36.000000    18.000000
+25%      37.000000    70.000000    36.500000    22.380000
+50%      55.000000    80.000000    37.000000    26.610000
+75%      72.000000    91.000000    37.500000    30.800000
+max      90.000000   100.000000    38.000000    35.000000
+
+Unique Values Count (Categorical Columns):
+Patient_ID            5000
+Gender                   2
+Blood_Type               8
+Condition                5
+Medication             966
+Doctor                4830
+Location              4291
+Blood_Pressure        1522
+Insurance_Provider    4530
+Appointment_Date       731
+Notes                 5000
+
+==================================================
